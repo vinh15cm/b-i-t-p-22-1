@@ -9,33 +9,51 @@
 
 <body>
     <script>
-        // Hàm để tạo đối tượng sinh viên
-        function createStudent(id, name) {
-            return {
-                id: id,
-                name: name
+        // Đối tượng sách
+        function Book(title, author, publishedYear) {
+            this.title = title;
+            this.author = author;
+            this.publishedYear = publishedYear;
+
+            // Phương thức hiển thị thông tin sách
+            this.displayInfo = function () {
+                console.log(`Title: ${this.title}, Author: ${this.author}, Published Year: ${this.publishedYear}`);
             };
         }
 
-        // Yêu cầu người dùng nhập số lượng sinh viên
-        const numberOfStudents = parseInt(prompt("Nhập số lượng sinh viên:"));
+        // Đối tượng thư viện
+        function Library() {
+            this.books = [];
 
-        // Mảng để lưu trữ sinh viên
-        let students = [];
+            // Phương thức thêm sách vào thư viện
+            this.addBook = function (book) {
+                this.books.push(book);
+            };
 
-        // Yêu cầu người dùng nhập thông tin của mỗi sinh viên
-        for (let i = 0; i < numberOfStudents; i++) {
-            const id = prompt("Nhập ID của sinh viên " + (i + 1) + ":");
-            const name = prompt("Nhập tên của sinh viên " + (i + 1) + ":");
-
-            // Tạo đối tượng sinh viên và thêm vào mảng
-            const student = createStudent(id, name);
-            students.push(student);
+            // Phương thức hiển thị danh sách đầy đủ thông tin sách trong thư viện
+            this.displayLibrary = function () {
+                console.log("Danh sách sách trong thư viện:");
+                this.books.forEach(function (book) {
+                    book.displayInfo();
+                });
+            };
         }
 
-        // In mảng sinh viên ra màn hình
-        console.log("Danh sách sinh viên:");
-        console.log(students);
+        // Tạo một số đối tượng sách
+        var book1 = new Book("Harry Potter", "J.K. Rowling", 1997);
+        var book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+        var book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+
+        // Tạo đối tượng thư viện
+        var library = new Library();
+
+        // Thêm sách vào thư viện
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+
+        // Hiển thị danh sách đầy đủ thông tin sách trong thư viện
+        library.displayLibrary();
     </script>
 </body>
 
