@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tạo đối tượng con người
+        var person = {
+            name: 'John',
+            age: 25,
+            address: '123 Main Street'
+        };
+
+        // Truy cập và hiển thị các thuộc tính của đối tượng
+        console.log('Tên:', person.name);
+        console.log('Tuổi:', person.age);
+        console.log('Địa chỉ:', person.address);
+
+        // Thêm một thuộc tính ngày sinh
+        person.birthdate = '1999-01-01';
+
+        // Hiển thị đối tượng sau khi thêm thuộc tính ngày sinh
+        console.log('Sau khi thêm ngày sinh:', person);
+
+        // Xóa thuộc tính tuổi
+        delete person.age;
+
+        // Hiển thị đối tượng sau khi xóa thuộc tính tuổi
+        console.log('Sau khi xóa tuổi:', person);
+    </script>
+</body>
+
+</html>

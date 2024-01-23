@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function calculate(a, b) {
+        //     console.log("trước từ khóa return");
+        //     return a + b;
+        //     console.log("sau từ khóa return");
+        // }
+        // let a = calculate(12, 20);// 30
+        // console.log(a);
+        // let b = calculate(-10, 20);//10
+        // console.log("kết quả bình phương", b ** 2);
+        // calculate(20, 20);
+        // function increaseByn(arr, n) {
+        //     for (let index in arr) {
+        //         arr[index] = arr[index] + n;
+        //     }
+        //     return arr;
+        // }
+        // function multiplyByn(arr, n) {
+        //     for (let index in arr) {
+        //         arr[index] = arr[index] * n;
+        //     }
+        //     return arr;
+        // }
+        // console.log(increaseByn([1, 2, 3, 4], 2));
+        // console.log(increaseByn([1, 2, 3, 4], 10));
+        // console.log(multiplyByn([1, 2, 3, 4], 2));
+        // function map(arr, fn) {
+        //     fn()
+        //     for (let index in arr) {
+        //         arr[index] = fn(arr[index])//trả về giá trị mới được áp dụng quy tắc theo hàm chúng ta đã lan truyền vào thực tế khi gọi map
+        //     }
+        //     return arr;
+        // }
+        // let res1 = map([1, 2, 3, 4], function (element) {
+        //     return element + 2;
+        // });
+        // let res2 = map([1, 2, 3, 4], function (element) {
+        //     return element * 2;
+        // });
+        // console.log(res1);
+        // console.log(res2);
+        let result = [1, 2, 3, 4, 5, 6].find(function (e, i) {
+            return e > 2;
+        });
+        console.log(result);
+        function fakeFind(arr, fn) {
+            for (let index in arr) {
+                fn(arr[index], index)// true || false
+            }
+
+        }
+        fakeFind([1, 2, 3, 4, 5, 6], function (e, i) {
+            return e === 3;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo đối tượng Book
+        function Book(author, name) {
+            return {
+                author: author,
+                name: name
+            };
+        }
+
+        // Khai báo mảng chứa các đối tượng Book
+        let books = [
+            Book("Tác giả A", "Sách 1"),
+            Book("Tác giả B", "Sách 2"),
+            Book("Tác giả A", "Sách 3"),
+            // Thêm các đối tượng Book khác tùy ý
+        ];
+
+        // Yêu cầu người dùng nhập tên tác giả
+        const searchAuthor = prompt("Nhập tên tác giả:");
+
+        // Tìm kiếm thông tin sách theo tác giả
+        let foundBooks = books.filter(book => book.author === searchAuthor);
+
+        // Kiểm tra kết quả tìm kiếm và in ra màn hình
+        if (foundBooks.length > 0) {
+            console.log("Thông tin sách của tác giả", searchAuthor + ":");
+            foundBooks.forEach(book => {
+                console.log("Tên sách:", book.name);
+            });
+        } else {
+            console.log("Không tìm thấy sách của tác giả", searchAuthor);
+        }
+    </script>
+</body>
+
+</html>

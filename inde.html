@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //object literal-- { }
+        let person = {
+            // properties: thuộc tính - tính chất
+            // dùng đẻ chỉ đối tượng cần mô tả
+            // key - value
+            // key2 - value2
+            // keyn - valuen
+            name: "xuân đức",
+            age: 20,
+            school: "phổ thông hà giang",
+            favoriteFood: ["mèn mén", "nem chua ", "pịa"],
+            bestFriend: ["thái anh"],
+            exBoyFriend: ["xuân trường"],
+            height: 150["cm"],
+            weight: 45["kg"],
+            single: true,
+            // method:phương thức - hành động các đối tượng có thể thực hiện được
+            // có thể thực hiện được
+            // key : value(function)
+            // ...
+            // keyN : valueN(function)
+            eat: function () {
+                console.log("xuân đức ăn mèn mén ngon quá....");
+            },
+            seeFriends: function () {
+                console.log("mày bị điên à !!!!")
+            }
+
+
+        };
+        // let Vinh = {
+        //     name: " Vinh dọn lúa ",
+        //     age: 20,
+        //     school: " Trường dọn dẹp ",
+        //     favoriteFood: [" phở ", " cơm  ", " lính  "],
+        //     bestFriend: [" ziggs"],
+        //     exBoyFriend: [" yasuo "],
+        //     height: 180,
+        //     weight: 90,
+        //     single: true,
+        //     eat: function () {
+        //         console.log("xuân đức ăn mèn mén ngon quá....");
+        //     },
+        //     seeFriends: function () {
+        //         console.log("mày bị điên à !!!!")
+        //     }
+
+        // };
+        // let Đức = {
+        //     name: " Hoàng tử mùa đông ",
+        //     age: 20,
+        //     school: " trăm mâm ",
+        //     favoriteFood: [" cơm rang ", " đồ tự nấu "],
+        //     bestFriend: [" Yasuo ", " Yone ", " sett", " Aatrox"],
+        //     exGirlFriend: [" khongaieo "],
+        //     height: 175,
+        //     weight: 66,
+        //     single: true,
+        //     eat: function () {
+        //         console.log("xuân đức ăn mèn mén ngon quá....");
+        //     },
+        //     seeFriends: function () {
+        //         console.log("mày bị điên à !!!!")
+        //     }
+
+        // };
+    
+        // let student1 = {
+        //     id: 1,
+        //     name: "vinh nguyen",
+        //     sởthích: bulul,
+        //     age: 30,
+        // };
+        // let student2 = {
+        //     id: 1,
+        //     name: "đức",
+        //     sởthích: working,
+        //     age: 30,
+        // };
+        // let student3 = {
+        //     id: 3,
+        //     name: "an gay",
+        //     sởthích: faifai,
+        //     age: 30,
+        // };
+
+        // class Student {
+        //     constructor(id, name, age, school) {
+        //         //keyword "this"
+        //         // khi được sử dụng trong constructor function
+        //         // sẽ được ràng buộc bởi chính constructor function đó
+        //         this.id = id;
+        //         this.name = name;
+        //         this.age = age;
+        //         this.school = school;
+        //     }
+        //     let student1 = new Student(1, "xuân đức", 18, "PTIT");
+        // let student3 = new Student(2, "trí đưức", 20, "PTIT");
+        // let student2 = new Student(3, "thái anh", 21, "PTIT");
+        // console.log("student1", student1);
+        // console.log("student2", student2);
+        // console.log("student3", student3);
+        // }
+        // class Student {
+        //     constructor(id, name, age, school) {
+        //         // khởi tạo đóio tượng bằng từ khóa new 
+        //         // từ Class
+        //         // --> constructor luôn được chạy đầu tiên 
+        //         this.id = id;
+        //         this.name = name;
+        //         this.age = age;
+        //         this.school = school;
+        //     }
+        //     introduce() {
+        //         console.log("xin chào !!!");
+        //     }
+        // };
+        // let student1 = new Student(1, "xuân đức", 18, "PTIT");
+        // let student3 = new Student(2, "trí đưức", 20, "PTIT");
+        // let student2 = new Student(3, "thái anh", 21, "PTIT");
+        // console.log("student1", student1);
+        // console.log("student2", student2);
+        // console.log("student3", student3);
+        // Thuộc tính prototype là gì ?? 
+        // cơ chế  prototype-base inheritance ( kế thừa dạng prototye )
+        // cơ chế Javascript là như thế nào ? 
+        // person.name//xuân đức
+        // console.log(`xin chào , tôi là ${person.name}, tôi thíc món ${person.favoriteFood[2]}`
+        // );
+        // console.log(
+        //     `xin chào , tôi là${person["name"]},tôi thích món ${person["favoriteFood"][2]}`
+        // );
+        // person["height"];
+        // for (let key in person) {
+        //     person[key];
+        //     //person[key];
+        //     //person[key khoong truy cập được]
+        //     // console.log(key);
+        //     // person[key] --- person["name"]
+        //     // person[key] --- person["age"]
+        //     // ...
+        //     // person[key] --- person{"seeFriends"}
+        //     console.log(key, person.key);
+        // }
+        // let a = "hello";
+        // console.log(a)
+        console.log(person);
+        person.tall = true;
+        console.log("sau khi được thêm thuộc tính single",person);
+        //update - cập nhật 1 thuộc tinh dành cho đối tượng
+        person.name ="xuân đức cập nhật";
+        console.log("sau khi cập nhật name",person);
+        // delete - xóa thuộc tính khỏi đối trượng
+        delete person.name;
+        console.log("sau khi đc xóa thuộc tính name",person)
+
+        
+    </script>
+</body>
+
+</html>

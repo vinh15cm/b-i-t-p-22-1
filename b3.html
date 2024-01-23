@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Hàm để tạo đối tượng sinh viên
+        function createStudent(id, name) {
+            return {
+                id: id,
+                name: name
+            };
+        }
+
+        // Yêu cầu người dùng nhập số lượng sinh viên
+        const numberOfStudents = parseInt(prompt("Nhập số lượng sinh viên:"));
+
+        // Mảng để lưu trữ sinh viên
+        let students = [];
+
+        // Yêu cầu người dùng nhập thông tin của mỗi sinh viên
+        for (let i = 0; i < numberOfStudents; i++) {
+            const id = prompt("Nhập ID của sinh viên " + (i + 1) + ":");
+            const name = prompt("Nhập tên của sinh viên " + (i + 1) + ":");
+
+            // Tạo đối tượng sinh viên và thêm vào mảng
+            const student = createStudent(id, name);
+            students.push(student);
+        }
+
+        // In mảng sinh viên ra màn hình
+        console.log("Danh sách sinh viên:");
+        console.log(students);
+    </script>
+</body>
+
+</html>

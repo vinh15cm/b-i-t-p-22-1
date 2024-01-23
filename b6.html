@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Hàm để sắp xếp danh sách products tăng dần theo giá
+        function sortProductsAscending(products) {
+            // Sử dụng phương thức sort để sắp xếp mảng theo giá tăng dần
+            products.sort((a, b) => a.price - b.price);
+        }
+
+        // Mảng products chứa các đối tượng product
+        let products = [
+            { id: 1, product_name: "Sản phẩm A", price: 50 },
+            { id: 2, product_name: "Sản phẩm B", price: 30 },
+            { id: 3, product_name: "Sản phẩm C", price: 80 },
+            // Thêm các đối tượng product khác tùy ý
+        ];
+
+        // Gọi hàm để sắp xếp danh sách products
+        sortProductsAscending(products);
+
+        // In ra màn hình mảng products đã được sắp xếp
+        console.log("Danh sách products sau khi sắp xếp tăng dần theo giá:");
+        console.log(products);
+    </script>
+</body>
+
+</html>
